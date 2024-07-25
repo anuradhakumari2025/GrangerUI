@@ -1,30 +1,59 @@
 import { createContext, useReducer } from "react";
 
-const PostList = createContext(
+export const PostListData = createContext({
+  postList: [],
+  addPost: () => {},
+  deletePost: () => { },
+});
+
+
+const postListReducer = (currentPostList, action) => {
+  return currentPostList;
+};
+
+const addPost = () => {};
+const deletePost = (postId) => {
+  console.log(`post is deleted for ${postId}`);
+
+};
+
+const DefaultPostList = [
   {
-    postList: [],
-    addPost : () =>{},
-    deletePost : () => {}
-  }
-  
-);
-const PostListProvider =({children})=> {
-  const [postList,dispatchPostList] = useReducer([]);
+    id: "1",
+    title: "Mumbai",
+    reactions: "500",
+    userId: "user1",
+    body: "I am going to Mumbai for study and enjoy,Peace Out",
+    tags: ["trek", "study"],
+  },
+  {
+    id: "2",
+    title: "Graduated",
+    reactions: "1000",
+    userId: "user2",
+    body: "Bhai BTECH ki degree mil gai,Hard to Believe ",
+    tags: ["trek", "study"],
+  },
+];
 
-  const addPost = () => {
+const PostListProvider = ({ children }) => {
+  const [postList, dispatchPostList] = useReducer(
+    postListReducer,
+    DefaultPostList
+  );
 
-  }
-  const deletePost = () => {
-
-  }
-  return(
-    <PostList.Provider value={{
-      postList : postList,
-      addPost : addPost,
-      deletePost : deletePost
-    }
-    }>{children}</PostList.Provider>
-  )
-}
+  return (
+    <PostListData.Provider
+      value={{
+        postList,
+        addPost,
+        deletePost,
+      }}
+    >
+      {children}
+    </PostListData.Provider>
+  );
+};
 
 export default PostListProvider;
+
