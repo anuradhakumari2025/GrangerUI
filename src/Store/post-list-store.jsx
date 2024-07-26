@@ -3,18 +3,19 @@ import { createContext, useReducer } from "react";
 export const PostListData = createContext({
   postList: [],
   addPost: () => {},
-  deletePost: () => { },
+  deletePost: () => {},
 });
 
-
 const postListReducer = (currentPostList, action) => {
-  return currentPostList;
-};
-
-const addPost = () => {};
-const deletePost = (postId) => {
-  console.log(`post is deleted for ${postId}`);
-
+  let newPostList = currentPostList;
+  if (action.type === "DELETE_POST") {
+    newPostList = currentPostList.filter(
+      (post) => post.id !== action.payload.postId
+    );
+  }
+  if (action.type === "ADD_POST") {
+  }
+  return newPostList;
 };
 
 const DefaultPostList = [
@@ -24,7 +25,7 @@ const DefaultPostList = [
     reactions: "500",
     userId: "user1",
     body: "I am going to Mumbai for study and enjoy,Peace Out",
-    tags: ["trek", "study"],
+    tags: ["Study", "Trek", "Enjoy"],
   },
   {
     id: "2",
@@ -32,7 +33,7 @@ const DefaultPostList = [
     reactions: "1000",
     userId: "user2",
     body: "Bhai BTECH ki degree mil gai,Hard to Believe ",
-    tags: ["trek", "study"],
+    tags: ["Degree", "Job", "Life Settle"],
   },
 ];
 
@@ -41,6 +42,25 @@ const PostListProvider = ({ children }) => {
     postListReducer,
     DefaultPostList
   );
+
+  const deletePost = (postId) => {
+    // console.log(`post is deleted for ${postId}`);
+    dispatchPostList({
+      type: "DELETE_POST",
+      payload: {
+        postId,
+      },
+    });
+  };
+
+  const addPost = () => {
+    dispatchPostList({
+      type: "ADD_POST",
+      payload: {
+        postId,
+      },
+    });
+  };
 
   return (
     <PostListData.Provider
@@ -56,4 +76,3 @@ const PostListProvider = ({ children }) => {
 };
 
 export default PostListProvider;
-

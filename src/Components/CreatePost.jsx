@@ -1,22 +1,68 @@
 const CreatePost = () => {
-  return(
-    <form>
-  <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1"/>
-  </div>
-  <div className="mb-3 form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
-</form>
-  )
-}
+  return (
+    <form className="createPost">
+      <div className="mb-3">
+        <label htmlFor="userId" className="form-label">
+          User Id
+        </label>
+        <input
+          type="text"
+          placeholder="Enter your user Id"
+          className="form-control"
+          id="userId"
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="title" className="form-label">
+          Post
+        </label>
+        <input
+          type="text"
+          placeholder="How are you feeling today...."
+          className="form-control"
+          id="title"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="body" className="form-label">
+          Post Content
+        </label>
+        <textarea
+          rows={5}
+          type="text"
+          placeholder="Tell me more about yourself"
+          className="form-control"
+          id="body"
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="reaction" className="form-label">
+          Number of reactions
+        </label>
+        <input
+          type="text"
+          placeholder="How many people reated to this post"
+          className="form-control"
+          id="reaction"
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="tags" className="form-label">
+          Hashtags
+        </label>
+        <input
+          type="text"
+          placeholder="Enter tags!!! using space"
+          className="form-control"
+          id="tags"
+        />
+      </div>
+      <button type="submit" className="btn btn-primary">
+        Post
+      </button>
+    </form>
+  );
+};
 
 export default CreatePost;
