@@ -14,8 +14,58 @@ const postListReducer = (currentPostList, action) => {
     );
   }
   if (action.type === "ADD_POST") {
+    newPostList = [action.payload, ...currentPostList];
   }
   return newPostList;
+};
+
+const PostListProvider = ({ children }) => {
+  const [postList, dispatchPostList] = useReducer(
+    postListReducer,
+    DefaultPostList
+  );
+
+  const deletePost = (postId) => {
+    // console.log(`post is deleted for ${postId}`);
+    dispatchPostList({
+      type: "DELETE_POST",
+      payload: {
+        postId,
+      },
+    });
+  };
+
+  const addPost = (
+    postUserId,
+    postTitle,
+    postBody,
+    postReactions,
+    postTags
+  ) => {
+    dispatchPostList({
+      type: "ADD_POST",
+      payload: {
+        id: Date.now(),
+        userId: postUserId,
+        title: postTitle,
+        body: postBody,
+        reactions: postReactions,
+        tags: postTags,
+      },
+    });
+  };
+
+  return (
+    <PostListData.Provider
+      value={{
+        postList,
+        addPost,
+        deletePost,
+      }}
+    >
+      {children}
+    </PostListData.Provider>
+  );
 };
 
 const DefaultPostList = [
@@ -36,43 +86,5 @@ const DefaultPostList = [
     tags: ["Degree", "Job", "Life Settle"],
   },
 ];
-
-const PostListProvider = ({ children }) => {
-  const [postList, dispatchPostList] = useReducer(
-    postListReducer,
-    DefaultPostList
-  );
-
-  const deletePost = (postId) => {
-    // console.log(`post is deleted for ${postId}`);
-    dispatchPostList({
-      type: "DELETE_POST",
-      payload: {
-        postId,
-      },
-    });
-  };
-
-  const addPost = () => {
-    dispatchPostList({
-      type: "ADD_POST",
-      payload: {
-        postId,
-      },
-    });
-  };
-
-  return (
-    <PostListData.Provider
-      value={{
-        postList,
-        addPost,
-        deletePost,
-      }}
-    >
-      {children}
-    </PostListData.Provider>
-  );
-};
 
 export default PostListProvider;
