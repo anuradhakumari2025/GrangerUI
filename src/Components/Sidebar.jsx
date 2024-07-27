@@ -62,8 +62,8 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
           aria-expanded="false"
         >
           <img
-            src="https://github.com/mdo.png"
-            alt=""
+            src="Anuradha profile pik.png"
+            alt="Anu"
             width="32"
             height="32"
             className="rounded-circle me-2"

@@ -3,6 +3,7 @@ import { createContext, useReducer } from "react";
 export const PostListData = createContext({
   postList: [],
   addPost: () => {},
+  addInitialPosts: () => {},
   deletePost: () => {},
 });
 
@@ -12,17 +13,20 @@ const postListReducer = (currentPostList, action) => {
     newPostList = currentPostList.filter(
       (post) => post.id !== action.payload.postId
     );
-  }
-  if (action.type === "ADD_POST") {
+  } else if (action.type === "ADD_INITIAL_POSTS") {
+    newPostList = action.payload.posts;
+  } else if (action.type === "ADD_POST") {
     newPostList = [action.payload, ...currentPostList];
   }
+
   return newPostList;
 };
 
 const PostListProvider = ({ children }) => {
   const [postList, dispatchPostList] = useReducer(
     postListReducer,
-    DefaultPostList
+    // DefaultPostList
+    []
   );
 
   const deletePost = (postId) => {
@@ -55,11 +59,21 @@ const PostListProvider = ({ children }) => {
     });
   };
 
+  const addInitialPosts = (posts) => {
+    dispatchPostList({
+      type: "ADD_INITIAL_POSTS",
+      payload: {
+        posts,
+      },
+    });
+  };
+
   return (
     <PostListData.Provider
       value={{
         postList,
         addPost,
+        addInitialPosts,
         deletePost,
       }}
     >
@@ -68,6 +82,7 @@ const PostListProvider = ({ children }) => {
   );
 };
 
+/* 
 const DefaultPostList = [
   {
     id: "1",
@@ -85,6 +100,8 @@ const DefaultPostList = [
     body: "Bhai BTECH ki degree mil gai,Hard to Believe ",
     tags: ["Degree", "Job", "Life Settle"],
   },
-];
+];  
+//Removing this default value because I want that it fetch data from dummy server
+*/
 
 export default PostListProvider;

@@ -11,18 +11,24 @@
 
 .post-card{
   margin: 29px;
-  padding: 30px;
+  padding: 10px;
 }
 .hashtag{
   margin: 0px 3px;
 }
 
 .reactions{
-  margin: 15px 0 0 0;
+  margin-top: 15px;
 }
 
 .createPost{
   width: 80%;
   margin-left: 8%;
   margin-top: 50px;
+}
+
+.wlcmMsg{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
 }
