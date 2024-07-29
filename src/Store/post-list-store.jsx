@@ -25,8 +25,7 @@ const postListReducer = (currentPostList, action) => {
 const PostListProvider = ({ children }) => {
   const [postList, dispatchPostList] = useReducer(
     postListReducer,
-    // DefaultPostList
-    []
+    DefaultPostList
   );
 
   const deletePost = (postId) => {
@@ -82,7 +81,7 @@ const PostListProvider = ({ children }) => {
   );
 };
 
-/* 
+
 const DefaultPostList = [
   {
     id: "1",
@@ -100,7 +99,8 @@ const DefaultPostList = [
     body: "Bhai BTECH ki degree mil gai,Hard to Believe ",
     tags: ["Degree", "Job", "Life Settle"],
   },
-];  
+]; 
+/* 
 //Removing this default value because I want that it fetch data from dummy server
 */
 

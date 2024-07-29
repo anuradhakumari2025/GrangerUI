@@ -20,21 +20,11 @@ const Post = ({ post }) => {
         {/* <span className="badge text-bg-primary">{post.tags}</span>
                 since tag is array so we will use map function */}
 
-        {/* {post.tags.map((tag) => (
+        {post.tags.map((tag) => (
           <span className="badge text-bg-primary hashtag " key={tag}>
             {tag}
           </span>
         ))} 
-        //This line throw error 
-         */}
-
-        {post.tags &&
-          Array.isArray(post.tags) &&
-          post.tags.map((tag) => (
-            <span className="badge text-bg-primary hashtag" key={tag}>
-              {tag}
-            </span>
-          ))}
 
         <div className="alert alert-success reactions" role="alert">
           This post has been reacted by {post.reactions} people
