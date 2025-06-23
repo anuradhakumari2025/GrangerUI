@@ -1,35 +1,35 @@
 import "./App.css";
-import Header from "./Components/Header";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from "./Components/Sidebar";
-import Footer from "./Components/Footer";
-import CreatePost from "./Components/CreatePost";
-import PostList from "./Components/PostList";
-import { useState } from "react";
-import PostListProvider from "./Store/post-list-store";
+import bgImg from "./bgImg.png";
+import Navbar from "./components/Navbar";
+import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
+import Section4 from "./components/Section4";
 
-function App() {
-  const [selectedTab, setSelectedTab] = useState("Home");
+const App = () => {
   return (
-    <PostListProvider>
-      <div className="app_container">
-        <Sidebar
-          selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
-        ></Sidebar>
-        <div className="content">
-          <Header></Header>
-          {selectedTab === "Home" ? (
-            <PostList></PostList>
-          ) : (
-            <CreatePost></CreatePost>
-          )}
-
-          <Footer></Footer>
+    <>
+      <section className="view1">
+        <Navbar />
+        {/* <div className="image">
+        <img src={bgImg} alt="" />
+      </div> */}
+        <h1>CUSTOM WELLNESS</h1>
+        <h1 className="touch">GET IN TOUCH</h1>
+        <div className="new">
+          <h4 className="">A new species of sportainment.</h4>
+          <p>
+            <span>
+              <i className="ri-vip-crown-2-fill"></i>
+            </span>
+            Improve your health - performance well
+          </p>
         </div>
-      </div>
-    </PostListProvider>
+      </section>
+      <Section2/>
+      <Section3/>
+      <Section4/>
+    </>
   );
-}
+};
 
 export default App;
