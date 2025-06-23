@@ -626,7 +626,7 @@ nav {
       display: flex;
       flex-direction: column;
       background-color: white;
-      padding: 1rem 1rem;
+      padding: 2rem 2rem;
       border-radius: 15px;
       .head {
         display: flex;
@@ -658,33 +658,48 @@ nav {
             background-color: white;
           }
         }
-        
       }
-      .twoPointSeven{
+      .twoPointSeven {
         color: gray;
-          span{
-            font-size: 3rem;
-            color: black;
-            letter-spacing: -2px;
-          }
+        span {
+          font-size: 3rem;
+          color: black;
+          letter-spacing: -2px;
         }
-        .well{
-          color: gray;
-        }
+      }
+      .well {
+        color: gray;
+      }
       .bottom {
         display: flex;
         justify-content: space-evenly;
-        p{ color: gray;
-          @include centerPos;
-          // align-items: flex-end;
-          .dot{
-            @include dot;
-          }
-          span{
+        gap: 4rem;
+        p {
+          color: gray;
+
+          span {
             font-size: 2rem;
             color: black;
             letter-spacing: -2px;
           }
+        }
+        .dot {
+          @include centerPos;
+          span {
+            @include dot;
+            background-color: #f3500d;
+            height: 8px;
+            width: 8px;
+          }
+        }
+      }
+      .image {
+        width: 100%;
+        margin: 1rem 0;
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 15vh;
         }
       }
     }
@@ -828,17 +843,366 @@ nav {
             font-weight: 500;
           }
         }
-        .mood {
-          font-weight: 500;
-          font-size: 1.2rem;
-          text-align: center;
-          padding-top: 1rem;
-          span {
-            display: inline-block;
-            i {
-              color: rgb(255, 187, 0);
-              font-size: 1.5rem;
+        .moodDiv {
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          background-color: rgba(255, 255, 255, 0.4);
+          -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+          .mood {
+            font-weight: 500;
+            background-color: white;
+            border-bottom-left-radius: 30px;
+
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem 0;
+            // background-color: red;
+            width: 70%;
+            span {
+              display: inline-block;
+              i {
+                color: rgb(255, 187, 0);
+                font-size: 1.5rem;
+              }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.view5 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 30px;
+  margin: 3.5rem 3rem;
+  background-color: black;
+  color: white;
+  padding: 3rem 3rem;
+  .up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .current {
+      font-weight: 400;
+      align-self: flex-start;
+      @include centerPos;
+      span {
+        @include dot;
+        height: 8px;
+        width: 8px;
+        background-color: white;
+      }
+    }
+    .win {
+      // background-color: #f3500d;
+      text-align: left;
+      width: 68%;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 3.8rem;
+      letter-spacing: -1px;
+      .image {
+        // margin-top: 10rem;
+        padding-top: 1rem;
+        img {
+          @include spanImg;
+        }
+      }
+      .leaf {
+        color: rgb(7, 218, 7);
+      }
+    }
+  }
+  .bottom {
+    .online {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+    hr {
+      opacity: 0.1;
+    }
+    .youth {
+      background-color: #f3500d;
+      border-radius: 15px;
+      padding: 1rem 1rem;
+      position: relative;
+      // padding-top: 0;
+      .orange {
+        width: 100%;
+        display: flex;
+        font-weight: 400;
+        font-size: 2rem;
+        justify-content: space-between;
+        // padding-bottom: 1rem;
+        span {
+          height: 2.4rem;
+          width: 2.4rem;
+          border-radius: 50%;
+          background-color: white;
+          @include centerPos;
+          margin-top: 2rem;
+          i {
+            color: black;
+          }
+        }
+      }
+      .youthDown {
+        display: flex;
+        gap: 0.3rem;
+
+        span {
+          border: 1px solid rgba(255, 255, 255, 0.438);
+          color: rgba(255, 255, 255, 0.87);
+          padding: 0.2rem 0.5rem;
+          border-radius: 15px;
+        }
+      }
+      .overlay {
+        position: absolute;
+        background-image: url("./racket.png");
+        background-position: center;
+        background-size: cover;
+        height: 40vh;
+        width: 32vh;
+        top: -45%;
+        right: 10%;
+        rotate: -7deg;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+.view6 {
+  margin: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  .up {
+    display: flex;
+    justify-content: space-between;
+    .people {
+      font-size: 3rem;
+      font-weight: 500;
+      width: 45%;
+      letter-spacing: -1px;
+      line-height: 3.2rem;
+      span {
+        img {
+          @include spanImg;
+        }
+      }
+    }
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      p {
+        background-color: white;
+        text-align: right;
+        width: fit-content;
+        align-self: flex-end;
+        padding: 0.2rem 0.8rem;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 1.5rem;
+        @include centerPos;
+        span{
+          @include dot;
+          height: 7px;
+          width: 7px;
+        }
+        i{
+          font-size: 1.5rem;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+
+    .left {
+      width: 50%;
+      background-color: white;
+      border-radius: 20px;
+      padding: 2rem 2rem;
+      .head {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        p {
+          @include centerPos;
+          span {
+            @include dot;
+          }
+        }
+        .line {
+          width: 90%;
+          height: 1px;
+          background-color: rgba(0, 0, 0, 0.205);
+        }
+      }
+      .stars {
+        span {
+          i {
+            color: rgb(255, 187, 0);
+          }
+        }
+      }
+      h3 {
+        font-size: 2.2rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+        width: 90%;
+        line-height: 2.6rem;
+        padding: 1rem 0;
+      }
+      .benedata {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7rem;
+        .chan {
+          width: 50%;
+          h3 {
+            font-size: 1.5rem;
+            padding: 0;
+          }
+          p {
+            padding: 0;
+            margin: 0;
+            color: gray;
+            font-weight: 500;
+            letter-spacing: -1px;
+          }
+        }
+        .circle {
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 1.5rem;
+          .circle1 {
+            height: 3rem;
+            align-self: flex-end;
+            width: 3rem;
+            border: 1px solid black;
+            position: relative;
+            border-radius: 50%;
+            .circle2 {
+              position: absolute;
+              height: 3rem;
+              width: 3rem;
+              border-radius: 50%;
+              background-color: #f3500d;
+              left: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              span {
+                i {
+                  color: white;
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right {
+      background-image: url("./racket.png");
+      background-position: center;
+      background-size: cover;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .head {
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: white;
+          font-size: 1.5rem;
+        }
+        .trainer {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          span {
+            background-color: white;
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            width: fit-content;
+            font-size: 1.5rem;
+            font-weight: 500;
+            i{
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+      .center {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          color: white;
+          font-size: 3rem;
+          font-weight: 500;
+        }
+        p {
+          text-align: center;
+          color: white;
+          padding: 1rem 0;
+        }
+        .session {
+          background-color: white;
+          width: fit-content;
+          padding: 0.2rem 0.8rem;
+          border-radius: 20px;
+          align-self: center;
+          color: gray;
+          font-weight: 500;
+          letter-spacing: -1px;
+          margin-top: 1rem;
+          span {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: black;
+          }
+        }
+      }
+      .rightEnd {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+          align-self: flex-end;
+          @include centerPos;
+          color: white;
+          font-weight: 400;
+          span {
+            @include dot;
+            background-color: white;
+          }
+        }
+        .arrow {
+          height: 4rem;
+          width: 4rem;
+          background-color: white;
+          border-radius: 50%;
+          @include centerPos;
+          i {
+            font-size: 2rem;
           }
         }
       }

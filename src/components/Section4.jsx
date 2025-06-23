@@ -1,4 +1,5 @@
 import ball from "../spanImg.png";
+import graph from "../graph.png"
 const Section4 = () => {
   return (
     <div className="view4">
@@ -18,12 +19,12 @@ const Section4 = () => {
           <p className="well">You improved current well-being</p>
 
           <div className="image">
-            <img src="" alt="" />
+            <img src={graph} alt="" />
           </div>
 
           <div className="bottom">
             <div className="one">
-              <p>
+              <p className="dot">
                 <span></span>Working
               </p>
               <p>
@@ -32,8 +33,8 @@ const Section4 = () => {
             </div>
 
             <div className="two">
-              <p>
-                <span className="dot"></span>Running
+              <p className="dot">
+                <span ></span>Running
               </p>
               <p>
                 <span>386 </span>Cal
@@ -41,7 +42,7 @@ const Section4 = () => {
             </div>
 
             <div className="three">
-              <p>
+              <p className="dot">
                 <span></span>Workout
               </p>
               <p>
@@ -86,7 +87,9 @@ const Section4 = () => {
               <div className="view"><span><i className="ri-run-line"></i></span>View More</div>
               <h3 className="comming">comming soon</h3>
             </div>
-            <h1 className="mood"><span><i className="ri-flashlight-fill"></i></span>Mood Boost</h1>
+            <div className="moodDiv">
+              <h1 className="mood"><span><i className="ri-flashlight-fill"></i></span>Mood Boost</h1>
+            </div>
           </div>
         </div>
       </div>
