@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Section2 from "./components/Section2";
@@ -8,10 +9,20 @@ import Section6 from "./components/Section6";
 import Section7 from "./components/Section7";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  }, [darkMode]);
   return (
     <>
       <section className="view1">
-        <Navbar />
+        <Navbar   darkMode={darkMode}
+ toggleTheme={()=>setDarkMode(!darkMode)} />
         <h1>CUSTOM WELLNESS</h1>
         <h1 className="touch">GET IN TOUCH</h1>
         <div className="new">

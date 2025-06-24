@@ -46,24 +46,24 @@ const Section3 = () => {
           </div>
         </div>
         <div className="middle">
-          <div class="text-block">
+          <div className="text-block">
             <p>
               The coach experts
-              <span class="avatar-group">
+              <span className="avatar-group">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym95fGVufDB8fDB8fHww"
                   alt="Avatar 1"
-                  class="avatar"
+                  className="avatar"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D"
                   alt="Avatar 2"
-                  class="avatar"
+                  className="avatar"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdpcmx8ZW58MHx8MHx8fDA%3D"
                   alt="Avatar 3"
-                  class="avatar"
+                  className="avatar"
                 />
               </span>
               and simple software ✿ for better sportainment.
@@ -91,21 +91,21 @@ const Section3 = () => {
           </div>
           <div className="bottom">
             <p className="oneK">
-            <span class="avatar-group">
+            <span className="avatar-group">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym95fGVufDB8fDB8fHww"
                   alt="Avatar 1"
-                  class="avatar"
+                  className="avatar"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D"
                   alt="Avatar 2"
-                  class="avatar"
+                  className="avatar"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdpcmx8ZW58MHx8MHx8fDA%3D"
                   alt="Avatar 3"
-                  class="avatar"
+                  className="avatar"
                 />
               </span>  1.20k <span>Membership</span>
             </p>

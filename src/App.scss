@@ -49,11 +49,25 @@ body {
   width: 100%;
 }
 body {
-  background-color: #f5f6fb;
+  background-color: var(--bg-color);
 }
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --bg-color: #f5f6fb;
+  --special-div-bg: black; 
+  --special-div-color: white;
+  --text-color: black;
+}
+
+.dark-theme {
+  --bg-color: black;
+  --special-div-bg: white; 
+  --special-div-color: black;
+  --text-color: white;
 }
 
 .view1 {
@@ -66,12 +80,14 @@ html {
   padding: 0 1.5rem;
   h1 {
     padding-top: 5rem;
-    color: rgba(255, 255, 255, 0.76);
+    opacity: 0.7;
+    color: var(--special-div-color);
     font-weight: 500;
   }
   .touch {
     padding-top: 5rem;
-    color: rgba(255, 255, 255, 0.76);
+    opacity: 0.7;
+    color: var(--special-div-color);
     font-weight: 500;
     position: absolute;
     padding-right: 1.5rem;
@@ -83,13 +99,12 @@ html {
     position: absolute;
     left: 11%;
     top: 30%;
-    color: rgba(255, 255, 255, 0.952);
+    color: var(--special-div-color);
     h4 {
       font-size: 2rem;
       font-weight: 500;
       width: 72%;
     }
-    // background-color: red;
     width: 25%;
   }
   p {
@@ -117,7 +132,7 @@ nav {
   padding-bottom: 0;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--special-div-color);
   .logo {
     width: 10%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.534);
@@ -126,7 +141,7 @@ nav {
   }
   .detail {
     border-bottom: 1px solid rgba(255, 255, 255, 0.534);
-    padding-bottom: 1rem;
+    padding-bottom: 1.1rem;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -136,7 +151,7 @@ nav {
       gap: 1rem;
       h4 {
         // color: rgba(255, 255, 255, 0.76);
-        color: white;
+        color: var(--special-div-color);
         opacity: 0.7;
         font-weight: 500;
         span {
@@ -154,34 +169,42 @@ nav {
       cursor: pointer;
     }
     .toggle {
-      border-radius: 20px;
-      // border: 1px solid rgba(255, 255, 255, 0.534);
-      display: flex;
-      background-color: #58add1;
+  cursor: pointer;
 
-      i {
-        font-size: 1.2rem;
-      }
-      .moon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 0.4rem;
-      }
-      .sun {
-        color: black;
-        background-color: white;
-        border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .icon-container {
+    position: relative;
+    width: 55px;
+    height: 30px;
+    background-color: var(--bg-color);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    i {
+      font-size: 16px;
+      color: var(--text-color);
+      z-index: 2;
+    }
+
+    .switch-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: rgb(216, 214, 214);
+      transition: all 0.3s ease;
+      z-index: 1;
+
+      &.right {
+        left: calc(100% - 27px);
       }
     }
-    .toggle:hover {
-      cursor: pointer;
-    }
+  }
+}
+
   }
 }
 
@@ -189,7 +212,8 @@ nav {
   display: flex;
   gap: 1rem;
   padding: 3.5rem 3rem;
-  background-color: #f5f6fb;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   .left {
     display: flex;
     width: 35%;
@@ -230,10 +254,15 @@ nav {
           margin-right: 0.2rem;
         }
       }
+      span:hover{
+        @include scale;
+      }
     }
     .whiteBg {
       margin-top: 3rem;
       background-color: white;
+      // color: var(--text-color);
+      color: black;
       border-radius: 10px;
       padding: 0.8rem 1.2rem;
       width: 90%;
@@ -258,6 +287,9 @@ nav {
         color: gray;
         padding-top: 0.5rem;
       }
+    }
+    .whiteBg:hover{
+      @include scale;
     }
     .bottom {
       display: flex;
@@ -291,6 +323,7 @@ nav {
       justify-content: space-between;
       .top {
         h2 {
+          color: black;
           span {
             margin-right: 0.5rem;
             i {
@@ -346,6 +379,7 @@ nav {
         // width: 60%;
         width: fit-content;
         background-color: white;
+        color: black;
         border-radius: 20px;
         padding: 0.2rem 0.8rem;
         letter-spacing: -1px;
@@ -356,8 +390,12 @@ nav {
           margin-right: 0.5rem;
         }
       }
+      h2:hover{
+        @include scale;
+      }
       .bottom {
         width: fit-content;
+        color: black;
         .content {
           background-color: white;
           border-top-left-radius: 15px;
@@ -417,7 +455,9 @@ nav {
   margin: 3.5rem 3rem;
   border-radius: 15px;
   padding: 3rem 3rem;
-  background-color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
   .one {
     display: flex;
     justify-content: space-between;
@@ -428,12 +468,19 @@ nav {
       span {
         border-radius: 20px;
         padding: 0.7rem 1rem;
-        background-color: #f5f6fb;
+        // background-color: var(--bg-color);
+        background-color: rgb(226, 226, 226);
+        // color: var(--text-color);
+        color: black;
+
         font-weight: 700;
         font-size: 1.1rem;
         i {
           margin-right: 0.3rem;
         }
+      }
+      span:hover{
+        @include scale;
       }
     }
     .program {
@@ -489,7 +536,7 @@ nav {
             font-size: 5rem;
             font-weight: 400;
             letter-spacing: -5px;
-            color: black;
+            color: var(--text-color);
           }
         }
         .upcoming {
@@ -534,8 +581,8 @@ nav {
     .middle {
       width: 35%;
       border-radius: 30px;
-      background-color: black;
-      color: white;
+      background-color: var(--special-div-bg);
+      color: var(--special-div-color);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -671,7 +718,8 @@ nav {
   display: flex;
   gap: 2rem;
   margin: 3.5rem 3rem;
-
+  background-color: var(--bg-color);
+  color: var(--text-color);
   .left {
     width: 50%;
     height: 90vh;
@@ -805,7 +853,11 @@ nav {
         border-radius: 50%;
         width: 3rem;
         background-color: white;
+        color: black;
         @include centerPos;
+      }
+      span:hover{
+        @include scale;
       }
       .eight {
         height: 1.5rem;
@@ -897,6 +949,7 @@ nav {
             align-self: center;
             padding: 0.4rem 1rem;
             font-weight: 500;
+            color: black;
             span {
               i {
                 color: #58add1;
@@ -923,6 +976,7 @@ nav {
           .mood {
             font-weight: 500;
             background-color: white;
+            color: black;
             border-bottom-left-radius: 30px;
 
             font-size: 1.2rem;
@@ -1056,6 +1110,8 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   .up {
     display: flex;
     justify-content: space-between;
@@ -1075,6 +1131,8 @@ nav {
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
+      color: black;
+
       p {
         background-color: white;
         text-align: right;
@@ -1108,6 +1166,7 @@ nav {
       background-color: white;
       border-radius: 20px;
       padding: 2rem 2rem;
+      color: black;
       .head {
         display: flex;
         align-items: center;
@@ -1217,6 +1276,7 @@ nav {
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
+          color: black;
           span {
             background-color: white;
             border-radius: 20px;
@@ -1229,9 +1289,11 @@ nav {
             }
           }
         }
-        .trainer{span:hover{
-          @include scale;
-        }}
+        .trainer {
+          span:hover {
+            @include scale;
+          }
+        }
       }
       .center {
         align-self: center;
@@ -1264,7 +1326,7 @@ nav {
             color: black;
           }
         }
-        .session:hover{
+        .session:hover {
           @include scale;
         }
       }
@@ -1289,6 +1351,7 @@ nav {
           @include centerPos;
           i {
             font-size: 2rem;
+            color: black;
           }
         }
         .arrow:hover {
@@ -1312,7 +1375,8 @@ nav {
   .one {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     justify-content: space-between;
     padding: 0 2rem;
     padding-bottom: 1rem;
@@ -1337,6 +1401,7 @@ nav {
         span {
           @include dot;
           background-color: white;
+          // color: black;
         }
       }
       h1 {
@@ -1356,6 +1421,7 @@ nav {
         @include centerPos;
         i {
           font-size: 1.5rem;
+          color: black;
         }
       }
     }
@@ -1389,8 +1455,8 @@ nav {
             margin-right: 0.5rem;
           }
         }
-        span:hover{
-                    @include scale;
+        span:hover {
+          @include scale;
         }
       }
     }
@@ -1406,12 +1472,12 @@ nav {
           letter-spacing: -1px;
         }
       }
-      .up{
-        .upRight{
-          p{
-            span:hover{
+      .up {
+        .upRight {
+          p {
+            span:hover {
               @include scale;
-              i{
+              i {
                 font-size: 1.5rem;
               }
             }
@@ -1430,17 +1496,16 @@ nav {
           font-size: 4rem;
           color: white;
           animation: anime 6s linear infinite;
-
         }
       }
     }
   }
-  @keyframes anime{
-    0%{
+  @keyframes anime {
+    0% {
       // rotate: 0deg;
       transform: rotate(0deg);
     }
-    100%{
+    100% {
       transform: rotate(360deg);
     }
   }
@@ -1452,7 +1517,8 @@ nav {
 
     .name {
       align-self: flex-end;
-      background-color: white;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       z-index: 20;
       padding: 0 2rem;
 
@@ -1467,7 +1533,8 @@ nav {
     }
     .place {
       z-index: 20;
-      background-color: white;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       width: 100%;
       padding: 0 2rem;
 
@@ -1487,7 +1554,8 @@ nav {
       justify-content: space-between;
       padding: 1rem 0;
       z-index: 20;
-      background-color: white;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       p {
         font-size: 1.2rem;
         font-weight: 500;
@@ -1498,9 +1566,10 @@ nav {
       flex-direction: column;
       position: absolute;
       width: 100%;
-      background-color: white;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       bottom: -140%;
-      animation: anime2 2s linear 5 ;
+      animation: anime2 2s linear 5;
       padding-bottom: 3rem;
       h1 {
         font-size: 24vw;
@@ -1523,11 +1592,11 @@ nav {
     }
   }
 }
-@keyframes anime2{
-  0%{
+@keyframes anime2 {
+  0% {
     bottom: -150%;
   }
-  100%{
+  100% {
     bottom: -140%;
   }
 }
