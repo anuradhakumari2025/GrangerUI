@@ -9,11 +9,11 @@ const Section5 = () => {
           <span></span>CURRENT EVENTS
         </h3>
         <h2 className="win">
-          To win over{" "}
+          To win over
           <span className="image">
             <img src={ball} alt="" />
           </span>
-          sports-minded consumers with{" "}
+          sports-minded consumers with
           <span className="leaf">
             <i className="ri-leaf-fill"></i>
           </span>

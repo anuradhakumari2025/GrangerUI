@@ -17,6 +17,23 @@
   align-items: center;
   justify-content: center;
 }
+@mixin avatar{
+  display: inline-flex;
+        align-items: center;
+        margin: 0 6px;
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          // border: 2px solid #000;
+          margin-left: -10px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+}
 * {
   margin: 0;
   padding: 0;
@@ -496,9 +513,12 @@ nav {
       flex-direction: column;
       justify-content: space-between;
       padding: 2rem 2rem;
-      .coach {
+      .text-block {
         font-size: 2rem;
-        font-weight: 400;
+        line-height: 1.2;
+      }
+      .avatar-group {
+        @include avatar;
       }
       .live {
         display: flex;
@@ -584,6 +604,11 @@ nav {
           font-size: 1.1rem;
           font-weight: 500;
           padding: 0rem 0;
+          display: flex;
+          align-items: center;
+          .avatar-group{
+            @include avatar;
+          }
           span {
             font-size: 0.8rem;
             opacity: 0.9;
@@ -980,6 +1005,7 @@ nav {
     }
   }
 }
+
 .view6 {
   margin: 3.5rem 3rem;
   display: flex;
@@ -1012,14 +1038,14 @@ nav {
         padding: 0.2rem 0.8rem;
         border-radius: 20px;
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         @include centerPos;
-        span{
+        span {
           @include dot;
           height: 7px;
           width: 7px;
         }
-        i{
+        i {
           font-size: 1.5rem;
           margin-right: 0.3rem;
         }
@@ -1142,9 +1168,9 @@ nav {
             border-radius: 20px;
             padding: 0.2rem 0.8rem;
             width: fit-content;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 500;
-            i{
+            i {
               margin-right: 0.3rem;
             }
           }
@@ -1204,6 +1230,192 @@ nav {
           i {
             font-size: 2rem;
           }
+        }
+      }
+    }
+  }
+}
+
+.view7 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 3.5rem 3rem;
+  // padding: 0 1rem;
+
+  .one {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 2rem;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+    gap: 2rem;
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      background-image: url("./racket.png");
+      background-position: center;
+      background-size: cover;
+      padding: 1rem;
+      width: 30%;
+      border-radius: 20px;
+      h3 {
+        @include centerPos;
+        width: fit-content;
+        color: white;
+        font-weight: 500;
+        span {
+          @include dot;
+          background-color: white;
+        }
+      }
+      h1 {
+        font-weight: 500;
+        color: white;
+        line-height: 2rem;
+        padding: 1.5rem 0;
+      }
+      .arrow {
+        position: absolute;
+        right: 25%;
+        bottom: 6%;
+        height: 3rem;
+        background-color: white;
+        width: 3rem;
+        border-radius: 50%;
+        @include centerPos;
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .center {
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+        width: 90%;
+        line-height: 4rem;
+      }
+      div {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        span {
+          border: 1px solid gray;
+          padding: 0.2rem 0.5rem;
+          font-weight: 500;
+          border-radius: 20px;
+          i {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+    .last {
+      display: flex;
+      flex-direction: column;
+      .up {
+        display: flex;
+        gap: 2rem;
+        p {
+          font-weight: 500;
+          font-size: 1.2rem;
+          letter-spacing: -1px;
+        }
+      }
+      .bottom {
+        background-color: #f3500d;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        @include centerPos;
+        align-self: flex-end;
+        margin-top: 3rem;
+        i {
+          font-size: 4rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .two {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .name {
+      align-self: flex-end;
+      background-color: white;
+      z-index: 20;
+      padding: 0 2rem;
+
+      span {
+        font-size: 1.2rem;
+        letter-spacing: -1px;
+        font-weight: 500;
+      }
+      .hello {
+        margin-right: 0.8rem;
+      }
+    }
+    .place {
+      z-index: 20;
+      background-color: white;
+      width: 100%;
+      padding: 0 2rem;
+
+      p {
+        font-size: 1.2rem;
+        letter-spacing: -1px;
+        font-weight: 500;
+      }
+    }
+    hr {
+      margin-top: 4rem;
+      opacity: 0.2;
+      z-index: 20;
+    }
+    .end {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      z-index: 20;
+      background-color: white;
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+    .granger {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      background-color: white;
+      bottom: -140%;
+      padding-bottom: 3rem;
+      h1 {
+        font-size: 24vw;
+        font-weight: 500;
+      }
+      div {
+        display: flex;
+        padding: 0 2rem;
+        span {
+          margin: 0 1.5rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        p {
+          margin-left: auto;
+          font-size: 1.2rem;
+          font-weight: 500;
         }
       }
     }
