@@ -135,7 +135,7 @@ nav {
         color: rgba(255, 255, 255, 0.76);
         font-weight: 500;
         span {
-          background-color: #f3500d;
+          background-color: #FE4C00;
           border-radius: 10px;
           padding: 2px 5px;
           font-size: 0.6rem;
@@ -280,7 +280,7 @@ nav {
           span {
             margin-right: 0.5rem;
             i {
-              color: #f3500d;
+              color: #FE4C00;
             }
           }
         }
@@ -316,6 +316,8 @@ nav {
     .rightRight {
       background-image: url("./ball.png");
       background-position: center;
+          background-size: cover;
+
       width: 50%;
       border-radius: 20px;
       display: flex;
@@ -492,7 +494,7 @@ nav {
           }
         }
         .rightArrow {
-          background-color: #f3500d;
+          background-color: #FE4C00;
           height: 3.5rem;
           width: 3.5rem;
           border-radius: 50%;
@@ -549,6 +551,8 @@ nav {
       height: 70vh;
       border-radius: 30px;
       background-position: center;
+          background-size: cover;
+
       padding: 2rem 2rem;
       .top {
         display: flex;
@@ -584,7 +588,7 @@ nav {
             justify-content: center;
             border-radius: 50%;
             i {
-              color: #f3500d;
+              color: #FE4C00;
             }
           }
           .twoK {
@@ -640,8 +644,9 @@ nav {
   .left {
     width: 50%;
     height: 90vh;
-    background-image: url("./racket.png");
+    background-image: url("./goal.png");
     background-position: center;
+    background-size: cover;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -671,7 +676,7 @@ nav {
         }
         .eightSeven {
           @include centerPos;
-          background-color: #f3500d;
+          background-color: #FE4C00;
           padding: 0.2rem 0.5rem;
           border-radius: 15px;
           color: white;
@@ -712,7 +717,7 @@ nav {
           @include centerPos;
           span {
             @include dot;
-            background-color: #f3500d;
+            background-color: #FE4C00;
             height: 8px;
             width: 8px;
           }
@@ -771,7 +776,7 @@ nav {
       .eight {
         height: 1.5rem;
         width: 1.5rem;
-        background-color: #f3500d;
+        background-color: #FE4C00;
         color: white;
         font-size: 0.8rem;
         margin-left: 0.2rem;
@@ -810,7 +815,7 @@ nav {
               height: 6rem;
               width: 6rem;
               border-radius: 50%;
-              background-color: #f3500d;
+              background-color: #FE4C00;
               @include centerPos;
               i {
                 font-size: 2.3rem;
@@ -830,8 +835,9 @@ nav {
         .image {
           border-top-left-radius: 30px;
           border-top-right-radius: 30px;
-          background-image: url("./racket.png");
+          background-image: url("./boyBall.png");
           background-position: center;
+              background-size: cover;
           height: 40vh;
           display: flex;
           flex-direction: column;
@@ -923,7 +929,6 @@ nav {
       }
     }
     .win {
-      // background-color: #f3500d;
       text-align: left;
       width: 68%;
       font-size: 3.5rem;
@@ -955,7 +960,7 @@ nav {
       opacity: 0.1;
     }
     .youth {
-      background-color: #f3500d;
+      background-color: #FE4C00;
       border-radius: 15px;
       padding: 1rem 1rem;
       position: relative;
@@ -992,7 +997,7 @@ nav {
       }
       .overlay {
         position: absolute;
-        background-image: url("./racket.png");
+        background-image: url("./girl.png");
         background-position: center;
         background-size: cover;
         height: 40vh;
@@ -1126,7 +1131,7 @@ nav {
               height: 3rem;
               width: 3rem;
               border-radius: 50%;
-              background-color: #f3500d;
+              background-color: #FE4C00;
               left: 50%;
               display: flex;
               align-items: center;
@@ -1143,7 +1148,7 @@ nav {
       }
     }
     .right {
-      background-image: url("./racket.png");
+      background-image: url("./girl2.png");
       background-position: center;
       background-size: cover;
       padding: 2rem;
@@ -1257,7 +1262,7 @@ nav {
       flex-direction: column;
       justify-content: space-between;
       position: relative;
-      background-image: url("./racket.png");
+      background-image: url("./boy2.png");
       background-position: center;
       background-size: cover;
       padding: 1rem;
@@ -1329,7 +1334,7 @@ nav {
         }
       }
       .bottom {
-        background-color: #f3500d;
+        background-color:  #FE4C00;
         height: 7rem;
         width: 7rem;
         border-radius: 50%;
