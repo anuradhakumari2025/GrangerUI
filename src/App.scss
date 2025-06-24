@@ -17,22 +17,26 @@
   align-items: center;
   justify-content: center;
 }
-@mixin avatar{
+@mixin avatar {
   display: inline-flex;
-        align-items: center;
-        margin: 0 6px;
-        .avatar {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          object-fit: cover;
-          // border: 2px solid #000;
-          margin-left: -10px;
+  align-items: center;
+  margin: 0 6px;
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -10px;
 
-          &:first-child {
-            margin-left: 0;
-          }
-        }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+@mixin scale {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 * {
   margin: 0;
@@ -108,7 +112,6 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  // background-color: rgba(18, 185, 185, 0.616);
   width: 100%;
   padding: 1rem 1.5rem;
   padding-bottom: 0;
@@ -132,15 +135,23 @@ nav {
       align-items: center;
       gap: 1rem;
       h4 {
-        color: rgba(255, 255, 255, 0.76);
+        // color: rgba(255, 255, 255, 0.76);
+        color: white;
+        opacity: 0.7;
         font-weight: 500;
         span {
-          background-color: #FE4C00;
+          background-color: #fe4c00;
           border-radius: 10px;
           padding: 2px 5px;
           font-size: 0.6rem;
         }
       }
+      h4:hover {
+        opacity: 1;
+      }
+    }
+    .menu:hover {
+      cursor: pointer;
     }
     .toggle {
       border-radius: 20px;
@@ -167,6 +178,9 @@ nav {
         justify-content: center;
         align-items: center;
       }
+    }
+    .toggle:hover {
+      cursor: pointer;
     }
   }
 }
@@ -280,7 +294,7 @@ nav {
           span {
             margin-right: 0.5rem;
             i {
-              color: #FE4C00;
+              color: #fe4c00;
             }
           }
         }
@@ -311,12 +325,15 @@ nav {
           border-radius: 20px;
           width: 80%;
         }
+        .btn:hover {
+          @include scale;
+        }
       }
     }
     .rightRight {
       background-image: url("./ball.png");
       background-position: center;
-          background-size: cover;
+      background-size: cover;
 
       width: 50%;
       border-radius: 20px;
@@ -493,8 +510,16 @@ nav {
             font-size: 1.5rem;
           }
         }
+        .leftArrow:hover,
+        .rightArrow:hover {
+          @include scale;
+          rotate: 5deg;
+          i {
+            font-size: 2rem;
+          }
+        }
         .rightArrow {
-          background-color: #FE4C00;
+          background-color: #fe4c00;
           height: 3.5rem;
           width: 3.5rem;
           border-radius: 50%;
@@ -542,6 +567,9 @@ nav {
         }
       }
     }
+    .middle:hover {
+      @include scale;
+    }
     .racket {
       width: 35%;
       display: flex;
@@ -551,7 +579,7 @@ nav {
       height: 70vh;
       border-radius: 30px;
       background-position: center;
-          background-size: cover;
+      background-size: cover;
 
       padding: 2rem 2rem;
       .top {
@@ -588,7 +616,7 @@ nav {
             justify-content: center;
             border-radius: 50%;
             i {
-              color: #FE4C00;
+              color: #fe4c00;
             }
           }
           .twoK {
@@ -610,7 +638,7 @@ nav {
           padding: 0rem 0;
           display: flex;
           align-items: center;
-          .avatar-group{
+          .avatar-group {
             @include avatar;
           }
           span {
@@ -632,6 +660,9 @@ nav {
           letter-spacing: 1.2px;
         }
       }
+    }
+    .racket:hover {
+      @include scale;
     }
   }
 }
@@ -676,7 +707,7 @@ nav {
         }
         .eightSeven {
           @include centerPos;
-          background-color: #FE4C00;
+          background-color: #fe4c00;
           padding: 0.2rem 0.5rem;
           border-radius: 15px;
           color: white;
@@ -717,7 +748,7 @@ nav {
           @include centerPos;
           span {
             @include dot;
-            background-color: #FE4C00;
+            background-color: #fe4c00;
             height: 8px;
             width: 8px;
           }
@@ -732,6 +763,9 @@ nav {
           height: 15vh;
         }
       }
+    }
+    .leftCenter:hover {
+      @include scale;
     }
   }
   .right {
@@ -776,7 +810,7 @@ nav {
       .eight {
         height: 1.5rem;
         width: 1.5rem;
-        background-color: #FE4C00;
+        background-color: #fe4c00;
         color: white;
         font-size: 0.8rem;
         margin-left: 0.2rem;
@@ -815,15 +849,18 @@ nav {
               height: 6rem;
               width: 6rem;
               border-radius: 50%;
-              background-color: #FE4C00;
+              background-color: #fe4c00;
               @include centerPos;
               i {
                 font-size: 2.3rem;
                 color: white;
               }
             }
+            .topRightArrow:hover {
+              @include scale;
+              rotate: 10deg;
+            }
             .explore {
-              // width: 10%;
               font-weight: 500;
               text-align: right;
             }
@@ -837,7 +874,7 @@ nav {
           border-top-right-radius: 30px;
           background-image: url("./boyBall.png");
           background-position: center;
-              background-size: cover;
+          background-size: cover;
           height: 40vh;
           display: flex;
           flex-direction: column;
@@ -866,6 +903,9 @@ nav {
                 margin-right: 0.5rem;
               }
             }
+          }
+          .view:hover {
+            @include scale;
           }
           .comming {
             text-transform: uppercase;
@@ -960,7 +1000,7 @@ nav {
       opacity: 0.1;
     }
     .youth {
-      background-color: #FE4C00;
+      background-color: #fe4c00;
       border-radius: 15px;
       padding: 1rem 1rem;
       position: relative;
@@ -1055,6 +1095,9 @@ nav {
           margin-right: 0.3rem;
         }
       }
+      p:hover {
+        @include scale;
+      }
     }
   }
   .bottom {
@@ -1131,7 +1174,7 @@ nav {
               height: 3rem;
               width: 3rem;
               border-radius: 50%;
-              background-color: #FE4C00;
+              background-color: #fe4c00;
               left: 50%;
               display: flex;
               align-items: center;
@@ -1141,6 +1184,12 @@ nav {
                   color: white;
                   font-size: 1.5rem;
                 }
+              }
+            }
+            .circle2:hover {
+              @include scale;
+              i {
+                font-size: 2rem;
               }
             }
           }
@@ -1180,6 +1229,9 @@ nav {
             }
           }
         }
+        .trainer{span:hover{
+          @include scale;
+        }}
       }
       .center {
         align-self: center;
@@ -1212,6 +1264,9 @@ nav {
             color: black;
           }
         }
+        .session:hover{
+          @include scale;
+        }
       }
       .rightEnd {
         display: flex;
@@ -1236,6 +1291,13 @@ nav {
             font-size: 2rem;
           }
         }
+        .arrow:hover {
+          @include scale;
+          rotate: 10deg;
+          i {
+            font-size: 2.5rem;
+          }
+        }
       }
     }
   }
@@ -1246,7 +1308,6 @@ nav {
   flex-direction: column;
   gap: 1rem;
   margin: 3.5rem 3rem;
-  // padding: 0 1rem;
 
   .one {
     display: flex;
@@ -1298,6 +1359,15 @@ nav {
         }
       }
     }
+    .left:hover {
+      @include scale;
+      .arrow {
+        rotate: 10deg;
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
     .center {
       h1 {
         font-size: 3.5rem;
@@ -1319,6 +1389,9 @@ nav {
             margin-right: 0.5rem;
           }
         }
+        span:hover{
+                    @include scale;
+        }
       }
     }
     .last {
@@ -1333,8 +1406,20 @@ nav {
           letter-spacing: -1px;
         }
       }
+      .up{
+        .upRight{
+          p{
+            span:hover{
+              @include scale;
+              i{
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
       .bottom {
-        background-color:  #FE4C00;
+        background-color: #fe4c00;
         height: 7rem;
         width: 7rem;
         border-radius: 50%;
@@ -1344,8 +1429,19 @@ nav {
         i {
           font-size: 4rem;
           color: white;
+          animation: anime 6s linear infinite;
+
         }
       }
+    }
+  }
+  @keyframes anime{
+    0%{
+      // rotate: 0deg;
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
     }
   }
 
@@ -1404,6 +1500,7 @@ nav {
       width: 100%;
       background-color: white;
       bottom: -140%;
+      animation: anime2 2s linear 5 ;
       padding-bottom: 3rem;
       h1 {
         font-size: 24vw;
@@ -1424,5 +1521,13 @@ nav {
         }
       }
     }
+  }
+}
+@keyframes anime2{
+  0%{
+    bottom: -150%;
+  }
+  100%{
+    bottom: -140%;
   }
 }

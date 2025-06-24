@@ -99,14 +99,21 @@ nav .detail .menu {
   gap: 1rem;
 }
 nav .detail .menu h4 {
-  color: rgba(255, 255, 255, 0.76);
+  color: white;
+  opacity: 0.7;
   font-weight: 500;
 }
 nav .detail .menu h4 span {
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   border-radius: 10px;
   padding: 2px 5px;
   font-size: 0.6rem;
+}
+nav .detail .menu h4:hover {
+  opacity: 1;
+}
+nav .detail .menu:hover {
+  cursor: pointer;
 }
 nav .detail .toggle {
   border-radius: 20px;
@@ -131,6 +138,9 @@ nav .detail .toggle .sun {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+nav .detail .toggle:hover {
+  cursor: pointer;
 }
 
 .view2 {
@@ -252,7 +262,7 @@ nav .detail .toggle .sun {
   margin-right: 0.5rem;
 }
 .view2 .right .rightLeft .top h2 span i {
-  color: #FE4C00;
+  color: #fe4c00;
 }
 .view2 .right .rightLeft .top p {
   width: 74%;
@@ -280,6 +290,11 @@ nav .detail .toggle .sun {
   justify-content: space-between;
   border-radius: 20px;
   width: 80%;
+}
+.view2 .right .rightLeft .down .btn:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 .view2 .right .rightRight {
   background-image: url("./ball.png");
@@ -471,8 +486,19 @@ nav .detail .toggle .sun {
 .view3 .three .left .circle .leftArrow i {
   font-size: 1.5rem;
 }
+.view3 .three .left .circle .leftArrow:hover,
+.view3 .three .left .circle .rightArrow:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  rotate: 5deg;
+}
+.view3 .three .left .circle .leftArrow:hover i,
+.view3 .three .left .circle .rightArrow:hover i {
+  font-size: 2rem;
+}
 .view3 .three .left .circle .rightArrow {
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   height: 3.5rem;
   width: 3.5rem;
   border-radius: 50%;
@@ -533,6 +559,11 @@ nav .detail .toggle .sun {
   font-size: 0.8rem;
   opacity: 0.8;
 }
+.view3 .three .middle:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
 .view3 .three .racket {
   width: 35%;
   display: flex;
@@ -579,7 +610,7 @@ nav .detail .toggle .sun {
   border-radius: 50%;
 }
 .view3 .three .racket .top .icon span i {
-  color: #FE4C00;
+  color: #fe4c00;
 }
 .view3 .three .racket .top .icon .twoK {
   font-weight: 400;
@@ -633,6 +664,11 @@ nav .detail .toggle .sun {
   font-size: 0.8rem;
   letter-spacing: 1.2px;
 }
+.view3 .three .racket:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
 
 .view4 {
   display: flex;
@@ -681,7 +717,7 @@ nav .detail .toggle .sun {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   padding: 0.2rem 0.5rem;
   border-radius: 15px;
   color: white;
@@ -736,7 +772,7 @@ nav .detail .toggle .sun {
   border-radius: 50%;
   display: inline-block;
   margin-right: 0.4rem;
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   height: 8px;
   width: 8px;
 }
@@ -749,6 +785,11 @@ nav .detail .toggle .sun {
   -o-object-fit: cover;
      object-fit: cover;
   height: 15vh;
+}
+.view4 .left .leftCenter:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 .view4 .right {
   width: 50%;
@@ -805,7 +846,7 @@ nav .detail .toggle .sun {
 .view4 .right .icons .eight {
   height: 1.5rem;
   width: 1.5rem;
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   color: white;
   font-size: 0.8rem;
   margin-left: 0.2rem;
@@ -844,7 +885,7 @@ nav .detail .toggle .sun {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -852,6 +893,12 @@ nav .detail .toggle .sun {
 .view4 .right .rightBottom .rightBottomLeft .gpt .circle .topRightArrow i {
   font-size: 2.3rem;
   color: white;
+}
+.view4 .right .rightBottom .rightBottomLeft .gpt .circle .topRightArrow:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  rotate: 10deg;
 }
 .view4 .right .rightBottom .rightBottomLeft .gpt .circle .explore {
   font-weight: 500;
@@ -903,6 +950,11 @@ nav .detail .toggle .sun {
 .view4 .right .rightBottom .rightBottomRight .image .view span i {
   color: #58add1;
   margin-right: 0.5rem;
+}
+.view4 .right .rightBottom .rightBottomRight .image .view:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 .view4 .right .rightBottom .rightBottomRight .image .comming {
   text-transform: uppercase;
@@ -1000,7 +1052,7 @@ nav .detail .toggle .sun {
   opacity: 0.1;
 }
 .view5 .bottom .youth {
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   border-radius: 15px;
   padding: 1rem 1rem;
   position: relative;
@@ -1105,6 +1157,11 @@ nav .detail .toggle .sun {
   font-size: 1.5rem;
   margin-right: 0.3rem;
 }
+.view6 .up .testimonial p:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
 .view6 .bottom {
   display: flex;
 }
@@ -1187,7 +1244,7 @@ nav .detail .toggle .sun {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   left: 50%;
   display: flex;
   align-items: center;
@@ -1196,6 +1253,14 @@ nav .detail .toggle .sun {
 .view6 .bottom .left .benedata .circle .circle1 .circle2 span i {
   color: white;
   font-size: 1.5rem;
+}
+.view6 .bottom .left .benedata .circle .circle1 .circle2:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.view6 .bottom .left .benedata .circle .circle1 .circle2:hover i {
+  font-size: 2rem;
 }
 .view6 .bottom .right {
   background-image: url("./girl2.png");
@@ -1233,6 +1298,11 @@ nav .detail .toggle .sun {
 .view6 .bottom .right .head .trainer span i {
   margin-right: 0.3rem;
 }
+.view6 .bottom .right .head .trainer span:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
 .view6 .bottom .right .center {
   align-self: center;
   display: flex;
@@ -1265,6 +1335,11 @@ nav .detail .toggle .sun {
   font-size: 1.5rem;
   font-weight: 600;
   color: black;
+}
+.view6 .bottom .right .center .session:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 .view6 .bottom .right .rightEnd {
   display: flex;
@@ -1299,6 +1374,15 @@ nav .detail .toggle .sun {
 }
 .view6 .bottom .right .rightEnd .arrow i {
   font-size: 2rem;
+}
+.view6 .bottom .right .rightEnd .arrow:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  rotate: 10deg;
+}
+.view6 .bottom .right .rightEnd .arrow:hover i {
+  font-size: 2.5rem;
 }
 
 .view7 {
@@ -1369,6 +1453,17 @@ nav .detail .toggle .sun {
 .view7 .one .left .arrow i {
   font-size: 1.5rem;
 }
+.view7 .one .left:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.view7 .one .left:hover .arrow {
+  rotate: 10deg;
+}
+.view7 .one .left:hover .arrow i {
+  font-size: 2rem;
+}
 .view7 .one .center h1 {
   font-size: 3.5rem;
   font-weight: 500;
@@ -1390,6 +1485,11 @@ nav .detail .toggle .sun {
 .view7 .one .center div span i {
   margin-right: 0.5rem;
 }
+.view7 .one .center div span:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
 .view7 .one .last {
   display: flex;
   flex-direction: column;
@@ -1403,8 +1503,16 @@ nav .detail .toggle .sun {
   font-size: 1.2rem;
   letter-spacing: -1px;
 }
+.view7 .one .last .up .upRight p span:hover {
+  scale: 1.05;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.view7 .one .last .up .upRight p span:hover i {
+  font-size: 1.5rem;
+}
 .view7 .one .last .bottom {
-  background-color: #FE4C00;
+  background-color: #fe4c00;
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
@@ -1417,6 +1525,15 @@ nav .detail .toggle .sun {
 .view7 .one .last .bottom i {
   font-size: 4rem;
   color: white;
+  animation: anime 6s linear infinite;
+}
+@keyframes anime {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .view7 .two {
   display: flex;
@@ -1471,6 +1588,7 @@ nav .detail .toggle .sun {
   width: 100%;
   background-color: white;
   bottom: -140%;
+  animation: anime2 2s linear 5;
   padding-bottom: 3rem;
 }
 .view7 .two .granger h1 {
@@ -1490,4 +1608,13 @@ nav .detail .toggle .sun {
   margin-left: auto;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+@keyframes anime2 {
+  0% {
+    bottom: -150%;
+  }
+  100% {
+    bottom: -140%;
+  }
 }/*# sourceMappingURL=App.css.map */
