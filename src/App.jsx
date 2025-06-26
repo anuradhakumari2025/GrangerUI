@@ -10,7 +10,7 @@ import Section7 from "./components/Section7";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
-  
+
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark-theme");
@@ -21,8 +21,10 @@ const App = () => {
   return (
     <>
       <section className="view1">
-        <Navbar   darkMode={darkMode}
- toggleTheme={()=>setDarkMode(!darkMode)} />
+        <Navbar
+          darkMode={darkMode}
+          toggleTheme={() => setDarkMode(!darkMode)}
+        />
         <h1>CUSTOM WELLNESS</h1>
         <h1 className="touch">GET IN TOUCH</h1>
         <div className="new">
@@ -35,12 +37,12 @@ const App = () => {
           </p>
         </div>
       </section>
-      <Section2/>
-      <Section3/>
-      <Section4/>
-      <Section5/>
-      <Section6/>
-      <Section7/>
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      <Section6 />
+      <Section7 />
     </>
   );
 };

@@ -1,9 +1,6 @@
-import React from "react";
 
 const Navbar = ({ darkMode, toggleTheme }) => {
-  const handleToggle = () => {
-    console.log("co");
-  };
+  
   return (
     <nav>
       <div className="logo">granger</div>
@@ -17,12 +14,14 @@ const Navbar = ({ darkMode, toggleTheme }) => {
           <h4>About</h4>
         </div>
         <div className="toggle" onClick={toggleTheme}>
-      <div className="icon-container">
-                <i className="ri-sun-line"></i>
-        <i className="ri-moon-line"></i>
-        <div className={`switch-thumb ${darkMode ? "right" : "left"}`}></div>
-      </div>
-    </div>
+          <div className="icon-container">
+            <i className="ri-sun-line"></i>
+            <i className="ri-moon-line"></i>
+            <div
+              className={`switch-thumb ${darkMode ? "right" : "left"}`}
+            ></div>
+          </div>
+        </div>
       </div>
     </nav>
   );

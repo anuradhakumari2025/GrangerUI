@@ -1690,4 +1690,216 @@ nav .detail .toggle .icon-container .switch-thumb.right {
   100% {
     bottom: -140%;
   }
+}
+@media (max-width: 720px) {
+  .view1 h1 {
+    font-size: 1.4rem;
+  }
+  .view1 nav .detail .menu {
+    display: none;
+  }
+  .view1 nav .detail .toggle {
+    margin-left: auto;
+  }
+  .view1 .new {
+    width: 100%;
+  }
+  .view2 {
+    flex-direction: column;
+    padding: 1rem 1rem;
+    gap: 3rem;
+  }
+  .view2 .left {
+    width: 100%;
+  }
+  .view2 .left .whiteBg,
+  .view2 .left .bottom {
+    width: 100%;
+  }
+  .view2 .right {
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .view2 .right .rightLeft {
+    width: 100%;
+    gap: 1rem;
+  }
+  .view2 .right .rightRight {
+    width: 100%;
+  }
+  .view3 {
+    padding: 1rem 1rem;
+    margin: 1rem;
+  }
+  .view3 .one {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .view3 .two {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .view3 .two h1,
+  .view3 .two p {
+    width: 100%;
+  }
+  .view3 .three {
+    flex-direction: column;
+  }
+  .view3 .three .middle {
+    gap: 2rem;
+    width: 100%;
+  }
+  .view3 .three .left {
+    width: 100%;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .view3 .three .racket {
+    width: 100%;
+  }
+  .view4 {
+    flex-direction: column;
+    margin: 2rem 2rem;
+  }
+  .view4 .left {
+    width: 100%;
+    flex-wrap: wrap;
+    height: 70vh;
+  }
+  .view4 .left .leftCenter {
+    padding: 0;
+  }
+  .view4 .right {
+    width: 100%;
+  }
+  .view4 .right .icons {
+    gap: 2rem;
+  }
+  .view4 .right .rightBottom {
+    flex-direction: column;
+  }
+  .view4 .right .rightBottom .rightBottomLeft {
+    width: 100%;
+  }
+  .view4 .right .rightBottom .rightBottomRight {
+    width: 100%;
+  }
+  .view5 {
+    margin: 2rem 1rem;
+    padding: 2rem 2rem;
+  }
+  .view5 .up {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .view5 .up .win {
+    width: 100%;
+    font-size: 3rem;
+  }
+  .view6 {
+    margin: 2rem 0rem;
+    padding: 0 2rem;
+  }
+  .view6 .up {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .view6 .up .people {
+    width: 100%;
+  }
+  .view6 .bottom {
+    flex-direction: column;
+  }
+  .view6 .bottom .left {
+    width: 100%;
+  }
+  .view6 .bottom .left .benedata {
+    margin-top: 2rem;
+  }
+  .view6 .bottom .left .benedata .chan h3 {
+    font-size: 1.3rem;
+  }
+  .view6 .bottom .right {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  .view6 .bottom .right .head p {
+    text-align: right;
+    font-size: 1.1rem;
+  }
+  .view6 .bottom .right .head .trainer span {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .view7 {
+    margin: 1rem 0rem;
+  }
+  .view7 .one {
+    flex-direction: column;
+  }
+  .view7 .one .left {
+    width: 100%;
+    height: 40vh;
+  }
+  .view7 .one .left .arrow {
+    right: 8%;
+  }
+  .view7 .one .center h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+  .view7 .one .center div {
+    flex-direction: column;
+  }
+  .view7 .one .center div span {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.3rem 1rem;
+  }
+  .view7 .one .last .up {
+    justify-content: space-between;
+  }
+  .view7 .one .last .bottom {
+    align-self: center;
+    margin-top: 0rem;
+  }
+  .view7 .two {
+    gap: 1rem;
+  }
+  .view7 .two .name {
+    display: flex;
+    align-self: flex-start;
+    gap: 0.5rem;
+  }
+  .view7 .two .name span {
+    font-size: 1rem;
+  }
+  .view7 .two .end {
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+  }
+  .view7 .two .end p {
+    font-size: 1rem;
+  }
+  .view7 .two .granger {
+    bottom: -92%;
+  }
+  .view7 .two .granger div {
+    padding: 0;
+    flex-direction: column;
+  }
+  .view7 .two .granger div span {
+    font-size: 1rem;
+  }
+  .view7 .two .granger div p {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=App.css.map */
