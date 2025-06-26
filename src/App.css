@@ -1769,9 +1769,19 @@ nav .detail .toggle .icon-container .switch-thumb.right {
     width: 100%;
     flex-wrap: wrap;
     height: 70vh;
+    padding: 0;
   }
   .view4 .left .leftCenter {
-    padding: 0;
+    padding: 1rem;
+  }
+  .view4 .left .leftCenter .twoPointSeven span {
+    font-size: 2rem;
+  }
+  .view4 .left .leftCenter .bottom {
+    gap: 1rem;
+  }
+  .view4 .left .leftCenter .bottom p span {
+    font-size: 1.5rem;
   }
   .view4 .right {
     width: 100%;
