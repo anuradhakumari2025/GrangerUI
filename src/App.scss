@@ -1625,6 +1625,15 @@ nav {
     gap: 3rem;
     .left {
       width: 100%;
+      .explore{
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+      }
+      .span{
+        span{
+          font-size: 0.9rem;
+        }
+      }
       .whiteBg,
       .bottom {
         width: 100%;
@@ -1650,6 +1659,11 @@ nav {
       flex-direction: column;
       justify-content: flex-start;
       gap: 1rem;
+      .left{
+        span{
+          font-size: 0.9rem;
+        }
+      }
     }
     .two {
       flex-direction: column;
@@ -1657,6 +1671,10 @@ nav {
       h1,
       p {
         width: 100%;
+      }
+      h1{
+         font-size: 2.5rem;
+        line-height: 2.8rem;
       }
     }
     .three {
@@ -1704,6 +1722,11 @@ nav {
     }
     .right {
       width: 100%;
+      .stay{
+        width: 100%;
+         font-size: 2.5rem;
+        line-height: 2.8rem;
+      }
       .icons {
         gap: 2rem;
       }
@@ -1728,7 +1751,8 @@ nav {
       gap: 1rem;
       .win {
         width: 100%;
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 2.8rem;
       }
     }
   }
@@ -1741,17 +1765,24 @@ nav {
       gap: 1rem;
       .people {
         width: 100%;
+         font-size: 2.5rem;
+        line-height: 2.8rem;
       }
     }
     .bottom {
       flex-direction: column;
       .left {
         width: 100%;
+       
+          h3{
+            width: 100%;
+          }
+        
         .benedata {
           margin-top: 2rem;
           .chan {
             h3 {
-              font-size: 1.3rem;
+              font-size: 1.2rem;
             }
           }
         }
@@ -1766,9 +1797,23 @@ nav {
           }
           .trainer {
             span {
-              font-size: 1rem;
+              font-size: 0.8rem;
               padding: 0.5rem 0.8rem;
             }
+          }
+        }
+        .center{
+          gap: 0.5rem;
+          margin: 2rem 0;
+          h1{
+            font-size: 2rem;
+          }
+          p{
+            padding: 0;
+            margin: 0;
+          }
+          .session{
+            margin-top: 0;
           }
         }
       }
@@ -1782,6 +1827,10 @@ nav {
       .left {
         width: 100%;
         height: 40vh;
+        h1{
+                  font-size: 1.8rem;
+
+        }
         .arrow {
           right: 8%;
         }
@@ -1816,7 +1865,12 @@ nav {
         align-self: flex-start;
         gap: 0.5rem;
         span {
-          font-size: 1rem;
+          font-size: 0.9rem;
+        }
+      }
+      .place{
+        p{
+          font-size: 0.9rem;
         }
       }
       .end {
